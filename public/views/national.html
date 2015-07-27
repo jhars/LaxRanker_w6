@@ -29,24 +29,46 @@
       <a href="/national" class="ui-btn">National Top 100</a>
       <a href="#" class="ui-btn">Rankings (State)</a>
       <a href="#" class="ui-btn">My Teams</a>
-      <a href="/register" class="ui-btn">Register</a>
+      <a href="#myPopup" data-rel="popup" class="ui-btn">Register</a>
+      <div data-role="popup" id="myPopup" class="ui-content">
+      <h3>Welcome!</h3>
+      <p>The "ui-content" class is especially useful when you have a popup with <span style="font-size:55px;">styled text</span>, and want the edges and corners to look extra clean and sleek. <strong>Note:</strong> The text will wrap to multiple lines if needed.</p>
+    </div>
   </div>
   </div>
+
+
+
+<!--   <div data-role="main" class="ui-content">
+    <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Show Popup</a>
+
+    <div data-role="popup" id="myPopup" class="ui-content">
+      <h3>Welcome!</h3>
+      <p>The "ui-content" class is especially useful when you have a popup with <span style="font-size:55px;">styled text</span>, and want the edges and corners to look extra clean and sleek. <strong>Note:</strong> The text will wrap to multiple lines if needed.</p>
+    </div>
+  </div> -->
+
+
 
   <div data-role="header">
     <h1>LaxRank</h1>
     <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Home</a>
   </div> 
-    <div data-role="main" class="ui-content">
+  <div data-role="main" class="ui-content">
     <h1>National Top 100</h1>
-    <ul id='national-list'></ul>
-  <!-- <div id='national-list'></div> -->
+    <ul data-role="listview" id='national-list'></ul>
+   <!--  <h2>Test UL List:</h2>
+    <ul data-role="listview">
+      <li><a href="#" class="ui-btn ui-icon-plus ui-btn-icon-right">List Item</a></li>
+      <li><a href="#">List Item</a></li>
+      <li><a href="#">List Item</a></li>
+    </ul> -->
+  </div>
 </div>
-
 
 <!-- TEAM (ALL) TEMPLATE -->
 <script type="text/template" id="team-template">
-<li><a href="#"> 
+<li><a href="#" class="ui-btn ui-icon-plus ui-btn-icon-right" id="follow-btn"> 
 <%= natRank %>
 <%= teamName %> 
 <%= state %></a></li>

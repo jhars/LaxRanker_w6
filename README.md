@@ -1,7 +1,5 @@
 
 MongoDB
-
-
 Authentication (requirements)
 login/register
 Data Validation
@@ -14,7 +12,14 @@ fix Refresh Problem
 ------------------------------------
 +TESTING
 + README.md
----------------------------------------------------------------
+--------------------------
+Would not work on Heroku, routes untested, auth setup but not not functional.
+
+Presenting on Local Host -- heroku was having trouble with my API and packages, plus the structure of the entire project needs to be slightly refactored in a better mobile format.
+
+
+
+-------------------------------------
 
 Front-End Framework = 
 

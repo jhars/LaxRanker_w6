@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
   <meta charset="utf-8">
   <!-- =======Mobile Styling Below======== -->
 <!-- Include meta tag to ensure proper rendering and touch zooming -->
@@ -14,43 +14,57 @@
 
 <!-- Include the jQuery Mobile library -->
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-</head>
+
 
   <!-- =======Mobile Styling Above======== -->
-  
-<body>
-<div data-role="page" id="pageone" data-theme="a">
-  <div data-role="panel" id="myPanel"> 
-    <h2>LaxRanks</h2>
-    <!-- <ul data-role="listview"> -->
-      
-    <div data-role="controlgroup" data-type="vertical">
-      <a href="#" class="ui-btn">National Top 50</a>
-      <a href="#" class="ui-btn">Rankings (State)</a>
-      <a href="#" class="ui-btn">My Teams</a>
-      <a href="#" class="ui-btn">Login / Register</a>
-    </div>
-  </div> 
-  <div data-role="header">
-    <h1>Register!</h1>
-    <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Home</a>
-  </div> 
+  </head>
+  <body>
+	<div data-role="page" id="pageone" data-theme="a">
 
-<!-- ////////////////////////////////////////////////// -->
-`
-   <div data-role="main" class="ui-content">
-    <form method="post" action="demoform.asp">
-      <div class="ui-field-contain">
-        <label for="email">E-mail:</label>
-        <input type="email" name="email" id="reg-email" placeholder="Your email..">
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="reg-password" placeholder="Enter Password...">
-      </div>
-      <input type="submit" data-inline="true" value="Submit">
-    </form>
-  </div>
+		<div data-role="panel" id="myPanel"> 
+	    	<h2>LaxRanks</h2>
+
+		    <div data-role="controlgroup" data-type="vertical">
+		      <a href="/" class="ui-btn">GA-DEMO</a>
+		      <a href="/national" class="ui-btn">National Top 100</a>
+		      <a href="#" class="ui-btn">Rankings (State)</a>
+		      <a href="#" class="ui-btn">My Teams</a>
+		      <a href="/register" class="ui-btn">Register</a>
+		  	</div>
+	  	</div>
+
+	  	<div data-role="header">
+	    	<h1>LaxRank</h1>
+	    	<a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Home</a>
+	  	</div> 
+	  	<div data-role="main" class="ui-content" id='show-my-league'>
+
+	    		<h1>My League:</h1>
+<!-- *****************TEMPLATES******************** -->
+	    		<!-- TEAM (ALL) TEMPLATE -->
+	    		<script type="text/template" id="my-league-template">
+	    		//may need if statement here
+	    			<strong>Welcome, <%=currentUser.email%>!</strong>
+	    			<ul class="list-group" id="my-league-list">
+	    		//list myLeague(Log) Array
+	    			</ul>
+	    		</script>
+
+			<!-- One Team (Log) TEMPLATE -->
+	    		<script type="text-template" id="user-teams-followed-template">
+	            	<li class="list-group-item">
+	              		<span class="label label-success"><%= laxteam %></span>
+	            	</li>
+	        	</script>
+
+		</div><!-- end main Content -->
+	</div><!-- end All Content -->
 
 
+
+
+
+    
 
 <!-- ////////////////////////////////////////// -->
 <!-- Include the jQuery library -->

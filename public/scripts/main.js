@@ -40,6 +40,6 @@ $(function() {//ending Syntax has been deleted
     
 
 
-  }; //end gameController
+  }; //end teamController
   teamController.setupView();
 });

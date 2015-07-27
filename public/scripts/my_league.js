@@ -1,0 +1,17 @@
+$(function(){
+
+var authController = {
+	authTemplate
+
+}
+
+
+
+
+
+
+
+
+
+
+})

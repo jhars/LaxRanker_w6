@@ -1,1 +1,0 @@
-myLeaguePoster.js
